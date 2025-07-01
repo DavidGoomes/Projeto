@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Início</title>
+</head>
+<body>
+    <h1>Bem-vindo ao Gerenciador de Tarefas!</h1>
+    <p>Escolha uma das opções abaixo:</p>
+    <ul>
+        <li><a href="/user/David">Ver perfil de David Gomes</a></li>
+        <li><a href="/post/42">Ler postagem #42</a></li>
+        <li><a href="/Tarefa">Tarefa</a></li>
+    </ul>
+
+{% block formulario %}
+<form method="POST">
+{{ form.crfs_token }}
+
+    {{ form.email.label }}
+    {{ form.email() }}
+
+    {{ form.senha.label }}
+    {{ form.senha() }}
+
+    {{ form.botao_confirmacao() }}
+</form>
+{% endblock %}
+</body>
+</html>
